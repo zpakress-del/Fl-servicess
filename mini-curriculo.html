@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Currículo</title>
+    <link rel="stylesheet" href="mini-curriculo.css">
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="img/Captura de tela 2026-06-21 160257.png" alt="Logo">
+    </div>
+    <div class="page" id="miniPage">
+        <h1>Mini Currículo</h1>
+        <p class="message">Edite apenas seu nome, CPF e email.</p>
+        <div class="field">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+        </div>
+        <div class="field">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+        </div>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com">
+        </div>
+        <button id="saveBtn">Salvar</button>
+        <div class="nav">
+            <a href="escolha-de-curriculo.html">Voltar</a>
+            
+        </div>
+    </div>
+    <div class="top-icons-box">
+        <a href="historico-chat.html" class="icon-btn" data-label="💬 Conversas" title="Conversas - Histórico de mensagens">
+            <span class="icon-chat"></span>
+        </a>
+        <a href="curriculos.html" class="icon-btn" data-label="🔍 Pesquisar" title="Pesquisar - Buscar currículos">
+            <span class="icon-search"></span>
+        </a>
+        <a href="config.html" class="icon-btn" data-label="⚙️ Configurações" title="Configurações - Tema, privacidade">
+            <span class="icon-config"></span>
+        </a>
+        <a href="escolha-de-curriculo.html" class="icon-btn" data-label="👤 Meu Perfil" title="Perfil - Ver meu perfil">
+            <span class="icon-profile"></span>
+        </a>
+        <a href="#" class="icon-btn" data-label="↩️ Voltar" title="Voltar - Página anterior" onclick="event.preventDefault(); history.back();">
+            <span class="icon-back"></span>
+        </a>
+    </div>
+  
+
+</body>
+</html>
+
+

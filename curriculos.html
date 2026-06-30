@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Currículos</title>
+    <link rel="stylesheet" href="curriculos.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, #090909 0%, #141414 48%, #141414 100%);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 100px;
+            gap: 30px;
+          
+        }
+
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        .logo span { color: #b00000; }
+        .search-box {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(31, 31, 31, 0.95);
+            border: 1px solid rgba(255,255,255,0.14);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            padding: 14px 50px;
+            width: min(760px, 100%);
+            margin: 0 auto;
+        }
+        .search-box input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.1rem;
+            outline: none;
+            padding: 8px 0;
+        }
+        .search-btn {
+            background: #b00000;
+            color: #fff;
+            border: none;
+            border-radius: 18px;
+            padding: 8px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-left: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-btn:hover { background: #d84747; }
+        .results-title {
+            color: #b00000;
+            font-size: 1.2rem;
+            margin: 32px 0 16px 48px;
+        }
+        .results-list {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .result-card {
+            background: #1f1f1f;
+            border: 1.5px solid #b00000;
+            border-radius: 16px;
+            padding: 20px 28px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 24px;
+            box-shadow: 0 2px 12px #000a;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+        }
+        .result-card:hover {
+            transform: translateY(-2px);
+            border-color: #d84747;
+            background: #212121;
+        }
+        .result-foto {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #2a2a2a;
+        }
+        .result-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .result-name {
+            color: #b00000;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .result-summary {
+            color: #ccc;
+            font-size: 0.95rem;
+            margin-top: 8px;
+            line-height: 1.5;
+            max-height: 3.6rem;
+            overflow: hidden;
+        }
+        .result-profissao {
+            color: #b00000;
+            font-size: 1rem;
+            margin-top: 2px;
+        }
+        .result-telefone {
+            color: #ccc;
+            font-size: 1rem;
+            margin-top: 2px;
+        }
+        .result-link {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex: 1;
+            text-decoration: none;
+            color: inherit;
+        }
+        .result-chat-btn {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            background: #b00000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+        .result-chat-btn:hover {
+            background: #d84747;
+        }
+        .result-chat-btn::before {
+            content: '';
+            display: block;
+            width: 22px;
+            height: 22px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M21 11.5C21 16.1944 16.9706 20 12 20C10.5272 20 9.13413 19.7362 7.91113 19.2672C7.37013 19.0622 6.74813 19.0992 6.24613 19.3702L3.85713 20.6462C3.38613 20.8992 2.89913 20.4632 3.02113 19.9442L3.57013 17.5912C3.68413 17.0992 3.52713 16.5632 3.17013 16.2072C2.42813 15.4662 2 14.5222 2 13.5C2 8.80558 6.02944 5 11 5C15.9706 5 21 8.80558 21 13.5Z' stroke='white' stroke-width='2'/><circle cx='8.5' cy='13' r='1.5' fill='white'/><circle cx='12' cy='13' r='1.5' fill='white'/><circle cx='15.5' cy='13' r='1.5' fill='white'/></svg>");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .result-card:hover {
+            transform: translateY(-2px);
+            border-color: #d84747;
+            background: #212121;
+        }
+        .top-icons-box {
+            position: fixed;
+            top: 32px;
+            right: 32px;
+            background: rgba(24, 0, 0, 0.85);
+            border-radius: 22px;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.25);
+            display: flex;
+            gap: 18px;
+            padding: 18px 12px;
+            z-index: 1000;
+            flex-direction: column;
+        }
+        .icon-btn {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.10);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .icon-btn:hover {
+            background: rgba(255,255,255,0.14);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(176, 0, 0, 0.5);
+        }
+        .icon-btn::after {
+            content: attr(data-label);
+            position: absolute;
+            right: 70px;
+            background: rgba(24, 0, 0, 0.95);
+            color: #ffffff;
+            padding: 8px 14px;
+            border-radius: 8px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            border: 1px solid rgba(176, 0, 0, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+        .icon-btn:hover::after {
+            opacity: 1;
+        }
+        .icon-chat::before {
+            content: '💬';
+            font-size: 24px;
+        }
+        .icon-search::before {
+            content: '🔍';
+            font-size: 24px;
+        }
+        .icon-config::before {
+            content: '⚙️';
+            font-size: 24px;
+        }
+        .icon-profile::before {
+            content: '👤';
+            font-size: 24px;
+        }
+        .icon-back::before {
+            content: '↩️';
+            font-size: 24px;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo-container img {
+            max-width: 420px;
+            height: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="img/Captura de tela 2026-06-21 160257.png" alt="Logo">
+    </div>
+    <div class="header">
+        <div class="search-box">
+            <input type="text" id="busca" placeholder="qual profissão você procura?" oninput="filtrarResultados()">
+            <button class="search-btn" onclick="filtrarResultados()">Pesquisar</button>
+        </div>
+    </div>
+    <div class="results-title">Currículos Disponíveis</div>
+    <div class="results-list" id="resultados"></div>
+    <div class="top-icons-box">
+        <a href="historico-chat.html" class="icon-btn" data-label="💬 Conversas" title="Conversas - Histórico de mensagens">
+            <span class="icon-chat"></span>
+        </a>
+        <a href="curriculos.html" class="icon-btn" data-label="🔍 Pesquisar" title="Pesquisar - Buscar currículos">
+            <span class="icon-search"></span>
+        </a>
+        <a href="config.html" class="icon-btn" data-label="⚙️ Configurações" title="Configurações - Tema, privacidade">
+            <span class="icon-config"></span>
+        </a>
+        <a href="escolha-de-curriculo.html" class="icon-btn" data-label="👤 Meu Perfil" title="Perfil - Ver meu perfil">
+            <span class="icon-profile"></span>
+        </a>
+        <a href="#" class="icon-btn" data-label="↩️ Voltar" title="Voltar - Página anterior" onclick="event.preventDefault(); history.back();">
+            <span class="icon-back"></span>
+        </a>
+    </div>
+   
+
+</body>
+</html>
+

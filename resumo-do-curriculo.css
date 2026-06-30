@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+.page {
+    width: min(900px, 95%);
+    padding: 32px;
+    background: linear-gradient(180deg, #090909 0%, #141414 48%, #141414 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    margin-top: 0;
+    color: #b00000;
+}
+
+p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.section {
+    margin-top: 24px;
+    padding: 20px;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    background: #181818;
+}
+
+.nav {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 14px;
+    border: 1px solid #b00000;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav a:hover {
+    background: #b00000;
+    color: #121212;
+}
+
+.summary-card {
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 24px;
+    padding: 28px;
+    margin-top: 24px;
+}
+
+.summary-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.summary-avatar-box {
+    width: 112px;
+    height: 112px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2a2a2a;
+}
+
+.summary-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.summary-name {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: #b00000;
+}
+
+.summary-role {
+    color: #fff;
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.summary-contact-chips {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.summary-contact-chips span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: rgba(176, 0, 0, 0.12);
+    border: 1px solid rgba(176, 0, 0, 0.25);
+    border-radius: 18px;
+    color: #ccc;
+    font-size: 0.94rem;
+}
+
+.summary-block {
+    margin-top: 24px;
+    padding: 24px;
+    background: #131313;
+    border: 1px solid #2a2a2a;
+    border-radius: 24px;
+}
+
+.summary-block-large {
+    padding-top: 20px;
+}
+
+.summary-block h2 {
+    margin-top: 0;
+    color: #b00000;
+}
+
+.summary-block p,
+.summary-block .summary-list-item {
+    color: #ccc;
+    margin: 10px 0 0;
+    line-height: 1.6;
+}
+
+.summary-list-item {
+    padding: 12px 14px;
+    background: #121212;
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+}
+
+.empty {
+    padding: 24px;
+    color: #ccc;
+    border: 1px dashed #2a2a2a;
+    border-radius: 18px;
+    background: #141414;
+}

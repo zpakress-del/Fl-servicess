@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - FL SERVICES</title>
+    <link rel="stylesheet" href="config.css">
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="logo-container">
+        <img src="img/Captura de tela 2026-06-21 160257.png" alt="Logo">
+    </div>
+           
+            <h1>Configurações da Conta</h1>
+        </div>
+        <div class="section">
+            <h2>Apagar Cadastro</h2>
+            <p>Ao apagar seu cadastro, todas as suas informações pessoais serão removidas permanentemente do site.</p>
+            <button class="btn danger" onclick="apagarCadastro()">Apagar Cadastro</button>
+        </div>
+        <div class="section">
+            <h2>Apagar Histórico</h2>
+            <p>Remove todo o histórico de navegação e interações no site.</p>
+            <button class="btn danger" onclick="apagarHistorico()">Apagar Histórico</button>
+        </div>
+        <div class="section">
+            <h2>Informações do Criador</h2>
+            <div class="info">
+                <p><strong>Site criado por:</strong> grupo fl services</p>
+                <p><strong>Data de criação:</strong> AINDA EM CRIAÇÃO</p>
+                <p><strong>Versão:</strong> 1.0</p>
+            </div>
+        </div>
+    </div>
+    <div class="top-icons-box">
+        <a href="historico-chat.html" class="icon-btn" data-label="💬 Conversas" title="Conversas - Histórico de mensagens">
+            <span class="icon-chat"></span>
+        </a>
+        <a href="curriculos.html" class="icon-btn" data-label="🔍 Pesquisar" title="Pesquisar - Buscar currículos">
+            <span class="icon-search"></span>
+        </a>
+        <a href="config.html" class="icon-btn" data-label="⚙️ Configurações" title="Configurações - Tema, privacidade">
+            <span class="icon-config"></span>
+        </a>
+        <a href="escolha-de-curriculo.html" class="icon-btn" data-label="👤 Meu Perfil" title="Perfil - Ver meu perfil">
+            <span class="icon-profile"></span>
+        </a>
+        <a href="#" class="icon-btn" data-label="↩️ Voltar" title="Voltar - Página anterior" onclick="event.preventDefault(); history.back();">
+            <span class="icon-back"></span>
+        </a>
+    </div>
+    <div class="footer">
+        © 2026 FL SERVICES. Todos os direitos reservados.
+    </div>
+
+</body>
+</html>
+

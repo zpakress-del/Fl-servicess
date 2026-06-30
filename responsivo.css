@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.top-icons-box {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  padding: 14px 10px !important;
+  background: linear-gradient(135deg, rgba(24, 0, 0, 0.98), rgba(92, 0, 0, 0.95)) !important;
+  border: 2px solid rgba(255, 89, 89, 0.8) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.25) !important;
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.top-icons-box .icon-btn {
+  width: 50px;
+  height: 50px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.top-icons-box .icon-btn:hover {
+  background: rgba(255,255,255,0.14);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(176, 0, 0, 0.5);
+}
+
+.top-icons-box .icon-btn::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 62px;
+  background: rgba(24, 0, 0, 0.95);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border: 1px solid rgba(176, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.top-icons-box .icon-btn:hover::after {
+  opacity: 1;
+}
+
+.icon-chat::before {
+  content: '💬';
+  font-size: 22px;
+}
+
+.icon-search::before {
+  content: '🔍';
+  font-size: 22px;
+}
+
+.icon-config::before {
+  content: '⚙️';
+  font-size: 22px;
+}
+
+.icon-profile::before {
+  content: '👤';
+  font-size: 22px;
+}
+
+.icon-back::before {
+  content: '↩️';
+  font-size: 22px;
+}
+
+button,
+.btn,
+.main-btn,
+.register-btn,
+.search-btn,
+.add-btn,
+.result-chat-btn,
+.profile-btn,
+.history-btn,
+input[type="submit"],
+input[type="button"],
+a[class*="btn"],
+.icon-btn {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  position: relative;
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.add-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #b00000, #d84747) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  border-radius: 999px !important;
+  padding: 10px 16px !important;
+  margin-top: 16px !important;
+  box-shadow: 0 8px 20px rgba(176, 0, 0, 0.24) !important;
+}
+
+button:disabled,
+.btn:disabled,
+.main-btn:disabled,
+.register-btn:disabled,
+.search-btn:disabled,
+.add-btn:disabled,
+.result-chat-btn:disabled,
+.profile-btn:disabled,
+.history-btn:disabled,
+input[type="submit"]:disabled,
+input[type="button"]:disabled,
+.icon-btn:disabled {
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  opacity: 0.65 !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .logo-container {
+    margin-bottom: 24px !important;
+  }
+
+  .logo-container img {
+    max-width: 320px !important;
+  }
+
+  .page,
+  .container,
+  .chat-container,
+  .register-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 16px !important;
+  }
+
+  .container {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .sidebar,
+  .main-content {
+    width: 100% !important;
+  }
+
+  .top-icons-box {
+    top: 12px !important;
+    right: 12px !important;
+    padding: 10px 8px !important;
+    gap: 10px !important;
+    flex-direction: column !important;
+  }
+
+  .top-icons-box .icon-btn {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .icon-btn::after {
+    display: none !important;
+  }
+
+  .header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 60px 0 16px !important;
+  }
+
+  .search-box {
+    width: 100% !important;
+    padding: 12px 16px !important;
+  }
+
+  .results-title {
+    margin: 24px 16px 12px !important;
+  }
+
+  .results-list {
+    padding: 0 12px 24px !important;
+  }
+
+  .result-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 16px !important;
+  }
+
+  .result-link {
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .result-chat-btn {
+    align-self: flex-end !important;
+  }
+
+  .chat-form {
+    flex-direction: column !important;
+  }
+
+  .chat-form input,
+  .chat-form button {
+    width: 100% !important;
+  }
+
+  .message {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 8px 24px !important;
+  }
+
+  .logo-container img {
+    max-width: 260px !important;
+  }
+
+  .page,
+  .container,
+  .chat-container,
+  .register-box {
+    padding: 18px 12px !important;
+  }
+
+  .section {
+    padding: 14px 12px !important;
+  }
+
+  .top-icons-box {
+    position: fixed !important;
+    top: 12px !important;
+    right: 12px !important;
+    left: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    width: auto !important;
+    flex-direction: column !important;
+    z-index: 99999 !important;
+    padding: 10px 8px !important;
+    gap: 10px !important;
+  }
+
+  .profile-pic {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .search-box input,
+  .search-box button,
+  .btn,
+  button,
+  input,
+  .main-btn {
+    font-size: 0.95rem !important;
+  }
+
+  .chat-window {
+    min-height: 280px !important;
+  }
+}

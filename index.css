@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Inter:wght@400&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #090909 0%, #141414 48%, #141414 100%);
+    color: #fff;
+    margin: 0;
+    padding: 80px 0 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.login-box {
+    position: relative;
+    background: linear-gradient(180deg, #090909 0%, #141414 48%, #141414 100%);
+    border-radius: 24px;
+    box-shadow: 0 0 28px linear-gradient(180deg, #090909 0%, #141414 48%, #141414 100%);
+    padding: 50px 36px 32px;
+    width: min(500px, 90%);
+    min-width: 340px;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    margin-top: 20px;
+}
+h1 {
+    color: #b00000;
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+label {
+    color: #ccc;
+    font-size: 1.5rem;
+    margin-bottom: -40px;
+    text-align: left;
+    width: 100%;
+}
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 20px 22px;
+    border: none;
+    border-radius: 16px;
+    background: #121212;
+    color: #fff;
+    font-size: 1.25rem;
+    outline: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    text-align: left;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    background: #b00000;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 4px 16px rgba(176, 0, 0, 0.35);
+}
+button[type="submit"]:hover {
+    background: #d84747;
+    transform: translateY(-1px);
+}
+.register-btn {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    padding: 16px 0;
+    background: #1f1f1f;
+    color: #b00000;
+    border: 1px solid #b00000;
+    border-radius: 28px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.register-btn:hover {
+    background: #b00000;
+    color: #fff;
+    transform: translateY(-1px);
+}
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.logo-container img {
+    max-width: 420px;
+    height: auto;
+}
+
+.flservices-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.flservices-logo__mark {
+    position: relative;
+}
+
+.flservices-logo__text {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.flservices-logo__bar {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #dc1f1f;
+}
+
+.flservices-logo__sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #888888;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-top: 10px;
+}

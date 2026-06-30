@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro realizado</title>
+    <link rel="stylesheet" href="cadastro-sucesso.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #090909 0%, #141414 48%, #141414 100%);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .success-box {
+            position: relative;
+            background: linear-gradient(180deg, #090909 0%, #141414 48%, #141414 100%);
+            border-radius: 18px;
+            box-shadow: 0 0 20px #000a;
+            padding: 40px 32px 32px 32px;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .top-icons-box {
+            position: fixed;
+            top: 32px;
+            right: 32px;
+            background: rgba(24, 0, 0, 0.85);
+            border-radius: 22px;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.25);
+            display: flex;
+            gap: 18px;
+            padding: 18px 12px;
+            z-index: 1000;
+            flex-direction: column;
+        }
+        .icon-btn {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.10);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .icon-btn:hover {
+            background: rgba(255,255,255,0.14);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(176, 0, 0, 0.5);
+        }
+        .icon-btn::after {
+            content: attr(data-label);
+            position: absolute;
+            right: 70px;
+            background: rgba(24, 0, 0, 0.95);
+            color: #ffffff;
+            padding: 8px 14px;
+            border-radius: 8px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            border: 1px solid rgba(176, 0, 0, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+        .icon-btn:hover::after {
+            opacity: 1;
+        }
+        .icon-chat::before {
+            content: 'ðŸ’¬';
+            font-size: 24px;
+        }
+        .icon-search::before {
+            content: 'ðŸ”';
+            font-size: 24px;
+        }
+        .icon-config::before {
+            content: 'âš™ï¸';
+            font-size: 24px;
+        }
+        .icon-profile::before {
+            content: 'ðŸ‘¤';
+            font-size: 24px;
+        }
+        .icon-back::before {
+            content: 'â†©ï¸';
+            font-size: 24px;
+        }
+
+        h1 {
+            color: #b00000;
+            margin-bottom: 18px;
+        }
+        p {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo-container img {
+            max-width: 420px;
+            height: auto;
+        }
+        .success-box {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 3000);
+    </script>
+
+</head>
+<body>
+    <div class="logo-container">
+        <img src="img/Captura de tela 2026-06-21 160257.png" alt="Logo">
+    </div>
+    <div class="success-box">
+        <h1>Cadastro realizado com sucesso!</h1>
+        <p>Você será redirecionado em instantes...</p>
+    </div>
+</body>
+</html>
+
+
+

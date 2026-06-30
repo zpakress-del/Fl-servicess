@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="img/Captura de tela 2026-06-21 160257.png" alt="Logo">
+    </div>
+    <div class="chat-container chat-container--offset">
+        <h1 id="chatTitulo">Chat</h1>
+        <a id="perfilLink" class="profile-btn profile-btn--hidden" href="#">Ver currículo</a>
+        <div class="chat-window" id="chatWindow">
+            <div class="message bot">Bem-vindo à sala de chat. Use o campo abaixo para enviar uma mensagem.</div>
+        </div>
+        <div class="chat-form">
+            <input id="mensagem" type="text" placeholder="Digite uma mensagem...">
+            <button id="enviarBtn" type="button">Enviar</button>
+        </div>
+        <a class="back-link" href="curriculos.html"></a>
+        <a class="history-btn" href="historico-chat.html">💬 Histórico de Chat</a>
+    </div>
+    <div class="top-icons-box">
+        <a href="historico-chat.html" class="icon-btn" data-label="💬 Conversas" title="Conversas - Histórico de mensagens">
+            <span class="icon-chat"></span>
+        </a>
+        <a href="curriculos.html" class="icon-btn" data-label="🔍 Pesquisar" title="Pesquisar - Buscar currículos">
+            <span class="icon-search"></span>
+        </a>
+        <a href="config.html" class="icon-btn" data-label="⚙️ Configurações" title="Configurações - Tema, privacidade">
+            <span class="icon-config"></span>
+        </a>
+        <a href="escolha-de-curriculo.html" class="icon-btn" data-label="👤 Meu Perfil" title="Perfil - Ver meu perfil">
+            <span class="icon-profile"></span>
+        </a>
+        <a href="#" class="icon-btn" data-label="↩️ Voltar" title="Voltar - Página anterior" onclick="event.preventDefault(); history.back();">
+            <span class="icon-back"></span>
+        </a>
+    </div>
+    
